@@ -1,0 +1,151 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root{
+    --facebook: #3b5999;
+    --instagram: #e4405f;
+    --twitter: #55acee;
+    --github: #9A4FE9;
+    --linkedin: #0077B5;
+    --white:  #EDF3ED ;
+	--pink: #8B21FB;
+	--orange: #ff7800;
+	--black:#000000;
+	--light-color: #666;
+	--border-bold: .5rem solid var(--black);
+	--box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+	--box-profundo: inset 0 8px 60px rgba(0,0,0,0.1), inset 0 8px 8px rgba(0,0,0,0.1), inset 0 -4px 4px rgba(0,0,0,0.1);
+	--border:2rem solid rgba(0,0,0,.1);
+	--outline:1rem solid rgba(0,0,0,.1);
+	--outline-hover:.2rem solid var(--black);
+	--grey: #bfbcbc;
+
+}
+
+body.active 
+{
+	background: #3C3C3A;
+	color: var(--white);
+}
+
+
+.perfil {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10rem;
+}
+
+.Name{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: larger;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 1rem;
+}
+
+.foto_perfil{
+height: 10rem;
+width: 10rem;
+border-radius: 50%;
+object-fit: cover;
+margin-bottom: .5rem;
+}
+
+
+.redes-container{
+    display: flex;
+    height: 15vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.redes-container ul li{
+    display: inline-block;
+    margin: 0 5px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+}
+
+.redes-container ul li a{
+    display: block;
+    padding: 0 10px;
+    background: #4C4851;
+    color: #fff;
+    line-height:  50px;
+    font-size: 18px;
+    box-shadow: 0 3px 5px 0px rgba(0, 0, 0, .2);
+    transition: .2s;
+    border-radius: .5rem;
+}
+
+.redes-container ul:hover a{
+    filter: blur(2px);
+}
+
+.redes-container ul li a:hover{
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 5px 5px 0px rgba(0, 0, 0, .4);
+    filter: none;
+}
+
+.redes-container ul li .facebook:hover{
+    background: var(--facebook);
+}
+
+.redes-container ul li .instagram:hover{
+    background: var(--instagram);
+}
+
+.redes-container ul li .twitter:hover{
+    background: var(--twitter);
+}
+
+.redes-container ul li .github:hover{
+    background: var(--github);
+}
+
+.redes-container ul li .linkedin:hover{
+    background: var(--linkedin);
+}
+
+
+
+#toggle
+{
+margin-left: 43rem;
+position: relative;
+display: block;
+width: 60px;
+height: 35px;
+border-radius: 25px;
+background: var(--grey);
+transition: 0.5s;
+box-shadow: var(--box-profundo);
+}
+
+#toggle .indicador{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 35px ;
+	height: 35px;
+	background: linear-gradient(to bottom, #605E5E, #908D8D);
+	border-radius: 50%;
+	transform: scale(0.9);
+	cursor: pointer;
+	box-shadow: 0 8px 40px rgba(0,0,0,0.5),
+				inset 0 4px 4px rgba(255,255,255,0.2),
+				inset 0 -4px 4px rgba(255,255,255,0.2);
+	transition: 0.5s;
+}
+
+#toggle.active .indicador{
+  left:25px;
+}
