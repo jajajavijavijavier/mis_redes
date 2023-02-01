@@ -123,9 +123,7 @@ margin-bottom: .5rem;
 
 #toggle
 {
-    align-items: center;
-    justify-content: center;
-margin-left: 12rem;
+margin-left: 43rem;
 position: relative;
 display: block;
 width: 60px;
@@ -154,4 +152,14 @@ box-shadow: var(--box-profundo);
 
 #toggle.active .indicador{
   left:25px;
+}
+
+
+
+@media (max-width:450px){
+
+    #toggle
+{
+margin-left: 12rem;
+}
 }
